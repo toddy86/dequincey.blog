@@ -31,11 +31,20 @@ exclude:
   - screenshot.png
   - vendor
 
+# Resume details
+position: Data Scientist | Chartered Accountant
+email: todd.dequincey@gmail.com
+phone: 0477 358 262
+
+
+
 # Social media
 twitter_username:
 twitter_image:
 facebook_app_id:
 facebook_image:
+linkedin_username:
+github_username: toddy86 
 google_analytics:
 comments: false
 
