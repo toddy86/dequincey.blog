@@ -7,8 +7,9 @@ main:
     url: /resume/
   - title: "GitHub"
     url: https://github.com/toddy86/    
-  - title: "About"
-    url: /about/
-  - title: "Archives"
-    url: /archives/
+
+  # - title: "About"
+  #   url: /about/
+  # - title: "Archives"
+  #   url: /archives/
 
