@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox-plus-jquery.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.css" rel="stylesheet" />
+
+<!-- <p>default header for all gallery pages</p> -->
+
+{% for gallery in site.data.galleries %}
+  {% if gallery.id == page.galleryid %}
+    <h1>{{ gallery.name }}</h1>
+    <p>{{ gallery.description}}</p>
+    <!-- <ol> -->
+    {% for image in gallery.images %}
+      <!-- <li> -->
+        <!-- {{ image.text }}<br> -->
+        <a href="{{ gallery.imagefolder }}/{{ image.thumb }}" data-lightbox="{{ gallery.id }}" title="{{ image.text }}"> <img src="{{ gallery.imagefolder }}/{{ image.thumb }}" width="50%" height="50%"></a>
+        <p></p>
+      <!-- </li> -->
+    {% endfor %}
+    <!-- </ol> -->
+  {% endif %}
+{% endfor %}
+
+<!-- <p>default footer for all gallery pages</p> -->

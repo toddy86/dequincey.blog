@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<div class="home">
+
+  <h1 class="page-heading">Thoughts and Writing</h1>
+
+  {{ content }}
+
+  <ul class="post-archives">
+    {% for post in site.categories.thoughts %}
+      <li>
+        <h2><a href="{{ post.permalink }}">{{ post.title }}</a></h2>
+        <p>{{ post.excerpt }}</p>
+      </li>
+
+
+        {% if post.content contains site.excerpt_separator %}
+          <p class="post-continue">
+            <a href="{{ post.url | relative_url }}">Read more &rarr;</a>
+          </p>
+        {% endif %}
+      {% endfor %}
+  </ul>
+</div>

@@ -1,0 +1,161 @@
+- id: bolivia
+  name: Bolivia
+  description: Less poetic description than Peru and more photos coming soon…
+  imagefolder: ../images/bolivia
+  images:
+  - name: IMG_20170611_092455_583.jpg
+    thumb: IMG_20170611_092455_583.jpg
+  - name: IMG_20170603_013931_039.jpg
+    thumb: IMG_20170603_013931_039.jpg
+
+- id: peru
+  name: Peru
+  description: Poetic description coming soon…
+  imagefolder: ../images/peru
+  images:
+  - thumb: IMG_20170520_145816.jpg
+  - thumb: IMG_20170520_150134.jpg
+  - thumb: IMG_20170520_152208.jpg
+  - thumb: IMG_20170520_152327.jpg
+  - thumb: IMG_20170520_155605.jpg
+  - thumb: IMG_20170520_155646.jpg
+  - thumb: IMG_20170520_162535_1.jpg
+  - thumb: IMG_20170603_013840_217.jpg
+  - thumb: IMG_20170603_014017_593.jpg
+  - thumb: IMG_20170611_092228_776.jpg
+  - thumb: Machupicchu-city-2.jpg
+  - thumb: Machupicchu-view-3-2.jpg
+  - thumb: Machupicchu-view-4-2.jpg
+  - thumb: Photogenic-llama-at-Machupicchu-2.jpg
+  - thumb: Salkantay-laggon-no-filter-2.jpg
+  - thumb: Salkantay-lagoon-4-no-filter-2.jpg
+  - thumb: Salkantay-lagoon-5-no-filter-2.jpg
+  - thumb: Salkantay-lagoon.jpg
+  - thumb: Salkantay-trek-3-2.jpg
+  - thumb: Salkantay-trek-4-2.jpg
+  - thumb: Salkantay-trek-6-2.jpg
+  - thumb: Salkantay-trek-7-2.jpg
+  - thumb: Summit-of-Salkantay-2.jpg
+  - thumb: Swing-at-the-end-of-the-world-Banos-2.jpg
+
+
+
+- id: amazon
+  name: Amazon Jungle
+  description: Unquestionably the pinnacle of the journey so far, the Amazon Jungle delivered more than I imagined in my wildest dreams. With wildlife singing from every possible direction, it is hard to visit this truly magical part of the world and not have all of your modern day worries melt away. From pink dolphins at the river’s edge to friendly snakes visiting for dinner, mother nature put on a show of a lifetime.
+  imagefolder: ../images/amazon
+  images:
+  - thumb: IMG_20170502_150326.jpg
+  - thumb: IMG_20170502_153959.jpg
+  - thumb: IMG_20170503_071205.jpg
+  - thumb: IMG_20170503_100515.jpg
+  - thumb: IMG_20170503_101606.jpg
+  - thumb: IMG_20170503_103838.jpg
+  - thumb: IMG_20170503_104220.jpg
+  - thumb: IMG_20170503_104224.jpg
+  - thumb: IMG_20170503_105434.jpg
+  - thumb: IMG_20170503_114836.jpg
+  - thumb: IMG_20170504_103557-1.jpg
+  - thumb: IMG_20170504_105015.jpg
+  - thumb: IMG_20170504_111455.jpg
+  - thumb: IMG_20170504_132648.jpg
+  - thumb: IMG_20170504_141412.jpg
+  - thumb: IMG_20170504_141501.jpg
+  - thumb: IMG_20170504_141516.jpg
+  - thumb: IMG_20170504_143844.jpg
+  - thumb: IMG_20170504_160453.jpg
+  - thumb: IMG_20170505_180059.jpg
+  - thumb: IMG_20170507_184219.jpg
+  - thumb: IMG_20170507_204120.jpg
+
+- id: columbia
+  name: Columbia
+  description: Neither words nor photos can accurately capture the wonder of Columbia. Breathtaking scenery, kind genuine people and food which never leaves you disappointed. One month in this spectacular country simply was not enough and I am 100% certain to return to this amazing country again.
+  imagefolder: ../images/columbia
+  images:  
+  - thumb: IMG_20170326_124018.jpg
+  - thumb: IMG_20170327_203350_416-2.jpg
+  - thumb: IMG_20170327_203713_371.jpg
+  - thumb: IMG_20170327_203919_868.jpg
+  - thumb: IMG_20170401_145342.jpg
+  - thumb: IMG_20170401_145511.jpg
+  - thumb: IMG_20170401_145756.jpg
+  - thumb: IMG_20170401_145802.jpg
+  - thumb: IMG_20170401_163408.jpg
+  - thumb: IMG_20170401_170139.jpg
+  - thumb: IMG_20170402_114546.jpg
+  - thumb: IMG_20170403_121103.jpg
+  - thumb: IMG_20170403_210123.jpg
+  - thumb: IMG_20170403_210404_866.jpg
+  - thumb: IMG_20170403_210638_316.jpg
+  - thumb: IMG_20170403_210833_640.jpg
+  - thumb: IMG_20170403_210833_642.jpg
+  - thumb: IMG_20170403_210833_643.jpg
+  - thumb: IMG_20170404_113926.jpg
+  - thumb: IMG_20170406_125455.jpg
+  - thumb: IMG_20170406_132202.jpg
+  - thumb: IMG_20170406_145559.jpg
+  - thumb: IMG_20170406_152336.jpg
+  - thumb: IMG_20170406_210013_345.jpg
+  - thumb: IMG_20170406_210052_587.jpg
+  - thumb: IMG_20170406_210120_365.jpg
+  - thumb: IMG_20170407_112259.jpg
+  - thumb: IMG_20170407_112309.jpg
+  - thumb: IMG_20170408_103838.jpg
+
+- id: mexico
+  name: Mexico
+  description: Ah Mexico. We had a bit of a love hate relationship, didn’t we? From spectacular scenery and (some) friendly locals, to pick pocketing, constant harassment from street vendors and difficult customs officers – you had it all! A country which will love you if you love it, the surprisingly large US neighbour has beautiful rolling hills and near perfect weather.
+  imagefolder: ../images/mexico
+  images: 
+  - thumb: Bike-in-front-of-a-cafe-Puelbla-Mexico.jpg
+  - thumb: cactus-mexico.jpg
+  - thumb: Crocodile-filled-lagona-exploration-XXXXX-Mexico.jpg
+  - thumb: IMG_20170305_172421_185.jpg
+  - thumb: IMG_20170305_172758_516.jpg
+  - thumb: IMG_20170305_172845_120.jpg
+  - thumb: IMG_20170305_173116_289.jpg
+  - thumb: IMG_20170305_183637_801.jpg
+  - thumb: IMG_20170306_183122_546.jpg
+  - thumb: IMG_20170306_183245_853.jpg
+  - thumb: IMG_20170306_183411_912.jpg
+  - thumb: IMG_20170306_183452_543.jpg
+  - thumb: IMG_20170306_183602_773.jpg
+  - thumb: IMG_20170310_111255.jpg
+  - thumb: IMG_20170310_123757.jpg
+  - thumb: IMG_20170311_154423_698.jpg
+  - thumb: IMG_20170311_155747_797.jpg
+  - thumb: IMG_20170317_100314.jpg
+  - thumb: IMG_20170319_141258.jpg
+  - thumb: IMG_20170320_164316_551.jpg
+  - thumb: IMG_20170320_164554_709.jpg
+  - thumb: IMG_20170320_164720_100-1.jpg
+  - thumb: IMG_20170320_164909_957.jpg
+  - thumb: IMG_20170325_092053_195.jpg
+  - thumb: IMG_20170325_092211_420.jpg
+  - thumb: IMG_20170325_092434_245.jpg
+  - thumb: Myan-Temple-Chichen-Itza-Mexico.jpg
+
+- id: usa
+  name: USA
+  description: Whilst our love affair was brief, it was filled with many surprises. Los Angeles, the city of Angels? We were not convinced of the presence of many angels, but your slightly southern neighbour of San Diego was a true beauty with friendly locals, stunning beaches and the best zoo in the world. This is not goodbye, but see you soon USA.
+  imagefolder: ../images/usa
+  images:
+  - thumb: IMG_20161027_075136.jpg
+  - thumb: IMG_20161027_075208-1.jpg
+  - thumb: IMG_20170224_190340_100.jpg
+  - thumb: IMG_20170226_190743_618-1.jpg
+  - thumb: IMG_20170226_191131_743.jpg
+  - thumb: IMG_20170228_090437.jpg
+  - thumb: Silverback-Gorrila-San-Diego-Zoo-USA.jpg
+  - thumb: Sister-Cities-of-LA-Los-Angeles-USA.jpg
+  - thumb: XXXX-San-Diego-USA.jpg 
+
+# - id: 
+#   name: 
+#   description: 
+#   imagefolder: ../images/
+#   images:
+#   - name: 
+#   - thumb: 
+

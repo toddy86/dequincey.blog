@@ -6,6 +6,8 @@ categories: thoughts
 
 Like everyone, there have been many moments in my life where I have experienced the sting of disappointment’s bite. That feeling which drags your spirit and robs you of happiness when reality has not served up the same rosy picture we imagined. Disappointment is the emotional lemon leaving our face and soul twisted.
 
+<!-- more -->
+
 But what if we could avoid disappointment? As we look both ways before crossing the road, can we look both ways to avoid disappointment? I believe we can.
 
 Oxford can disagree, but disappointment is the unwanted feeling when your imagination of the future is different to what reality dishes up. And like the child who throws toys out of the cot, positive emotions are tossed to the side and the bitter taste that is disappointment is all that resides.
