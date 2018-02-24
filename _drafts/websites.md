@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: null
 title: Creating a website
 categories: recommendations
 ---
