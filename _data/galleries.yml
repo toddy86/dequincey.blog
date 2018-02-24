@@ -40,7 +40,7 @@
 
 
 
-- id: amazon
+- id: galleries/amazon
   name: Amazon Jungle
   description: Unquestionably the pinnacle of the journey so far, the Amazon Jungle delivered more than I imagined in my wildest dreams. With wildlife singing from every possible direction, it is hard to visit this truly magical part of the world and not have all of your modern day worries melt away. From pink dolphins at the river’s edge to friendly snakes visiting for dinner, mother nature put on a show of a lifetime.
   imagefolder: ../images/amazon
@@ -68,7 +68,7 @@
   - thumb: IMG_20170507_184219.jpg
   - thumb: IMG_20170507_204120.jpg
 
-- id: columbia
+- id: galleries/columbia
   name: Columbia
   description: Neither words nor photos can accurately capture the wonder of Columbia. Breathtaking scenery, kind genuine people and food which never leaves you disappointed. One month in this spectacular country simply was not enough and I am 100% certain to return to this amazing country again.
   imagefolder: ../images/columbia
@@ -103,7 +103,7 @@
   - thumb: IMG_20170407_112309.jpg
   - thumb: IMG_20170408_103838.jpg
 
-- id: mexico
+- id: galleries/mexico
   name: Mexico
   description: Ah Mexico. We had a bit of a love hate relationship, didn’t we? From spectacular scenery and (some) friendly locals, to pick pocketing, constant harassment from street vendors and difficult customs officers – you had it all! A country which will love you if you love it, the surprisingly large US neighbour has beautiful rolling hills and near perfect weather.
   imagefolder: ../images/mexico
@@ -136,7 +136,7 @@
   - thumb: IMG_20170325_092434_245.jpg
   - thumb: Myan-Temple-Chichen-Itza-Mexico.jpg
 
-- id: usa
+- id: galleries/usa
   name: USA
   description: Whilst our love affair was brief, it was filled with many surprises. Los Angeles, the city of Angels? We were not convinced of the presence of many angels, but your slightly southern neighbour of San Diego was a true beauty with friendly locals, stunning beaches and the best zoo in the world. This is not goodbye, but see you soon USA.
   imagefolder: ../images/usa
