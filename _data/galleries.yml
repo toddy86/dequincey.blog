@@ -1,4 +1,4 @@
-- id: bolivia
+- id: galleries/bolivia
   name: Bolivia
   description: Less poetic description than Peru and more photos coming soon…
   imagefolder: ../images/bolivia
@@ -8,7 +8,7 @@
   - name: IMG_20170603_013931_039.jpg
     thumb: IMG_20170603_013931_039.jpg
 
-- id: peru
+- id: galleries/peru
   name: Peru
   description: Poetic description coming soon…
   imagefolder: ../images/peru
