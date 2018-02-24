@@ -5,7 +5,7 @@ permalink: /blog/
 ---
 
 
-<h3><a href="{{ site.url | relative_url }}/thoughts">Thoughts and Writing</a></h3>
+<h3><a href="{{ site.baseurl | relative_url }}/thoughts">Thoughts and Writing</a></h3>
 The results of me thinking for too long
 
 
