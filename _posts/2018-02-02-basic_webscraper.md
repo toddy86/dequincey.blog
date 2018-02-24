@@ -4,164 +4,218 @@ title: Web Scraper with Beautiful Soup
 categories: projects
 ---
 
-INSERT DESRIPTION OF WHAT THE PROJECT GOAL/OBJECTIVE WAS AND THE RESULTS 
-
-LEARNING AND BUILDING: TOTAL TIME 
-EST. TIME TO DO AGAIN: LESS THAN TOTAL LEARNING TIME
-RESOURCES: https://www.youtube.com/watch?v=ng2o98k983k
-LESSONS LEARNT:
-CREATE A BS CHEATSHEET
-
-CHEATSHEET ITEMS TO INCLUDE
-1. requests.get('website') # grab a website 
-2. .text .grabs the text from the soup or converts to text
-3. .title #grabs the tile from the soup
-4. .prettify() # converts a HTML string into typical layout / pretty layout
-5. .find('what you want to find') # finds an element which meets a certain criteria
-6. .find_all()
-7. .['attr_name']
-8. .split() --> split a string based on a specific character (e.g. .split('/') )
-9. Indexing after a split or return of multiple items done with the typical [3] syntax 
-
+A very basic web gathers financial data from a website and saves the results to CSV for further data analysis.
 
 <!-- more -->
+<b>Project goal</b> 
 
+Learn the concepts of how to scrape data from websites and understand the different Python technologies available for web scraping. 
+
+<b>Lessons learnt</b>
+<ul>
+	<li>How to build a basic web scraper</li>
+	<li>How to use the requests library to make HTTP requests</li>
+	<li>How to save data to a CSV</li>
+</ul>
+
+<b>Technology Review</b>
+
+BeautifulSoup is a very user friendly Python library, but does require additional libraries to work effectivey (e.g. lxml).
+
+BeautifulSoup is especially useful for quickly build small or one-off web scrapping scripts (e.g. I used these skills to scrape all of the images from my old blog).
+
+More complicated projects that require multipage scraping etc might be better built using <a href="https://scrapy.org/">scrapy</a>.
+
+---
 <h3>Step 1: Install Required Packages</h3>
 
 All of the below (except for Python) come pre-installed with the Anaconda package, but they can be manually installed via pip if required.
 
-<ul>
-	<li>Python</li>
-	<li>BeautifulSoup4</li>
-	<li>lxml</li>
-	<li>requests</li>
-</ul>
-
-<h4>Python</h4>
-Who doesn't have Python installed?!
-
-<h4>BeautifulSoup4</h4>
-Must ensure that you have <u>BeautifulSoup4</u> installed and NOT BeautifulSoup.
-
 {% highlight ruby %}
+# Ensure that you install BeautifulSoup4 and NOT BeautifulSoup
 pip install BeautifulSoup4
-{% endhighlight %}
 
-<h4>lxml</h4>
-{% highlight ruby %}
+# Install lxml for parsing of HTML
 pip install lxml
-{% endhighlight %}
 
-<h4>requests</h4>
-{% highlight ruby %}
+# Install requests to grab contents of websites
 pip install requests
 {% endhighlight %}
 
+---
+<h3>Step 2: Become familar with the DOM of the website</h3>
+Access the webpage you want to scrape and <a href="https://developer.chrome.com/devtools">inspect the DOM</a>. Spend some time becoming familiar with the structure of the DOM and the css attributes of the content you want to scrape.  
 
+The example website I will scrape is the <a href="http://www.wsj.com/mdc/public/page/2_3022-intlstkidx-20180219.html">Yahoo Finance World Indicies</a> page.
 
-<h3>Step 2: Become familar with DOM structure of the website</h3>
-The example website I will be scraping is the Yahoo Finance World Indicies page.
-
-http://www.wsj.com/mdc/public/page/2_3022-intlstkidx-20180219.html
-
-Go to Chrome or other browser of choice and Inspect Element the page and become familiar with the layout of the DOM and the information you would specifically like to scrape. 
-
-
-
-
+---
 <h3>Step 3: Create a Python script and import dependencies</h3>
-Create a Python script with the .py extension - in my example I have called the script "webscraper.py"
+Create a Python script with the .py extension (e.g. "webscraper.py") and import the required dependencies.
 
-Then import the required dependencies
 {% highlight ruby %}
-from bs4 import BeautifulSoup
-import 
-import csv
+# Import the required dependencies
+from bs4 import BeautifulSoup 
+import requests 
+import csv # to export the scraped results to CSV (if desired)
 {% endhighlight%}
 
-
-
-
-<h3>Step 4: Parse HTML into BeautifulSoup</h3>
-Next we need to parse in the HTML into BeautifulSoup (BS) so that we can createa BS object. 
-
-{% highlight ruby %} 
+---
+<h3>Step 4: Parse the HTML into a BeautifulSoup object</h3>
+Grab the website content and create a BeautifulSoup object
+{% highlight ruby %}
 # Get the webpage content using requests, with additional .text to convert the HTML into a text object
 webpage = requests.get('http://www.wsj.com/mdc/public/page/2_3022-intlstkidx-20180219.html').text
 
-# Parse the text object to create a BeautifulSoup object
+# Create a BeautifulSoup object and parse the content using lxml 
 soup = BeautifulSoup(webpage, 'lxml')
 {% endhighlight %}
 
-To print the results to ensure the scraper is working as expected, print the soup object and use the prettify() method to format the object so it is readable. 
-
+Check your work so far by printing the object
 {% highlight ruby %}
+# Print the soup object to check the website has been successfully grabbed. Use .preittify() to make the results easily readable
 print(soup.prettify())
 {% endhighlight %}
 
 
-
-<h3>Step 5: Grab a single elements from the HTML object</h3>
-Before we grab mutliple elements from a page, the best place to start is by grabbing just one of the element first. This way we can test that our code works correctly before grabbing multiple versions of the element (as this could be hundreds, thousands or tens of thosands of elements).
-
-As there are multiple tables on the page, we need to be more specific than just using table as the find parameter. 
+---
+<h3>Step 5: Grab a single elements from the soup object</h3>
+Start small and grab a single element from the page. This way we can test that our code works correctly before scaling it up and grabbing multiple elements.
 
 
---------------------------------------
-TO TIDY UP
-Notes:
-	- .find() --> class_='', but the underscore is only required for class, as that is a special keyword in python
-	- .find('div', id='grab_this_id')
-	- .find('div', class_='grab_this_class')
---------------------------------------
-
-In the below we are going to grab and store the table from the HTML site. Then we will complete more grabs on the data we are storing int he table variable
+Use the .find() method to find and store the parent element with all of the content you want to scrape.  
 
 {% highlight ruby %}
-# Grab the div with the class='mdcWide' and store this as an object NB: the class arguement must be input as class_, and not just class, as this is a special keyword in Python
-mdcWide = soup.find('div', class_'mdcWide')
-
-# Pass the mdcWide object into the .find() method and grab the entire table from the HTML object (unnecessary step, but shown for step by step instructions)
-table = mdcWide.find('table')
+# As there is more than 1 table in the DOM, we need to grab and store the parent element of the table we are interested in, class='mdcWide'.
+mdcWide = soup.find('div', class_='mdcWide')
 
 # Pass the table object into the .find() method abd grab the td from the table object
-table_data = table.find('td')
-
+td = mdcWide.find('td')
 {% endhighlight %}
 
-To test your code, simply use the print() function to print the results of the variable (e.g. row) and review the results.
+Ensure you are regularly testing your code by printing the results to avoid bugs in the final code.
 
 
-
+---
 <h3>Step 6: Grab multiple elements from the HTML object</h3>
-Once we have established that we are grabbing the correct single element, we can then use the .find_all() method to grab all of the elements on the page which meet our criteria. 
+Once we have established that we are correctly  grabbing a single element from the page, we can then refactor our code and use the .find_all() method to grab all of the elements from the page. 
 
 {% highlight ruby %}
-# Create a for loop, which uses the .find_all() method and loops over the table_data results from before and prints out the inner text
-for table_data in table.find_all('td'):
-	results = table_data.text
-	print(results)
+# Create a for loop and uses the .find_all() method to grab all of the rows in the table stored in the mdcWide div
+for row in mdcWide.find_all('tr'):
+	
+	# Try block to handle exceptions
+	try:
+		# Grab the row name (index name), which has a unique css class (class="text")
+		index_name = row.find('td', class_='text').text
+		
+		# Find all td fields in the row (non-unique field)
+		all_td = row.find_all('td')
+
+		# Grab the close price, which is index [3] of the non-unique td fields
+		close = all_td[3].text
+
+	# Except clause to continue past any errors / rows which do not contain the index name or close price
+	except Exception as e:
+		continue
+
+	# Print the results to check code
+	print(index_name, close)
 {% endhighlight %}
 
-The above will print all of the results as separate line items. This is only done to test your code as you go / show you the results. We will store the results into a variable for output later.
-
-
-
+<p>Notes</p>
+<ul>
+	<li>The singular .find() method is used when finding the index_name as it has a unique class name of class="text"</li>
+	<li>The plural .find_all() method is used when finding all of the td elements, as there are multiple, non-unique td elements in each row containing financial data</li>
+	<li>The close price data is stored in the 3rd td index</li>
+	<li>The printing of the results above is only done to test the code. In the next step we will store the results into a variable for writing to CSV.</li>
+</ul>
 
 <h3>Step 7: Exporting results to CSV</h3>
-
+Create csv file and write to it. This syntax needs to be included <u>before</u> the for loop.
 {% highlight ruby %}
+# Create a csv_file variable for saving results to and set the file name. Set the arguement to write to the CSV ('w')
+csv_file = open('web_scraper_results.csv', 'w')
 
+# Create a csv_writer variable and pass in the csv_file to the writer
+csv_writer = csv.writer(csv_file)
+
+# Set the header row of the CSV to match the data being scraped
+csv_writer.writerow(['Index', 'Close Price'])
 {% endhighlight %}
 
-<h3></h3>
+
 {% highlight ruby %}
+# As the last step in the for loop, write the results of each element scraped to the CSV file
+csv_writer.writerow([index_name, close])
+
+# At the very end of the script, close the CSV file to ensure memory is managed
+csv_file.close()
 {% endhighlight %}
 
-<h3></h3>
+---
+<h3>Step 8: Run the final script</h3>
+Either run the script directly from Sublime (Command + B) or run the script from your terminal.
+
 {% highlight ruby %}
+# Import the required dependencies
+from bs4 import BeautifulSoup 
+import requests 
+import csv # to export the scraped results to CSV (if desired)
+
+# Get the webpage content using requests, with additional .text to convert the HTML into a text object
+webpage = requests.get('http://www.wsj.com/mdc/public/page/2_3022-intlstkidx-20180219.html').text
+
+# Create a BeautifulSoup object and parse the content using lxml 
+soup = BeautifulSoup(webpage, 'lxml')
+
+# Create a csv_file variable for saving results to and set the file name. Set the arguement to write to the CSV ('w')
+csv_file = open('web_scraper_results1.csv', 'w')
+
+# Create a csv_writer variable and pass in the csv_file to the writer
+csv_writer = csv.writer(csv_file)
+
+# Set the header row of the CSV to match the data being scraped
+csv_writer.writerow(['Index', 'Close Price'])
+
+
+# As there is more than 1 table in the DOM, we need to grab and store the parent element of the table we are interested in, class='mdcWide'.
+mdcWide = soup.find('div', class_='mdcWide')
+
+# Pass the table object into the .find() method abd grab the td from the table object
+td = mdcWide.find('td')
+
+# Create a for loop and uses the .find_all() method to grab all of the rows in the table stored in the mdcWide div
+for row in mdcWide.find_all('tr'):
+	
+	# Try block to handle exceptions
+	try:
+		# Grab the row name (index name), which has a unique css class (class="text")
+		index_name = row.find('td', class_='text').text
+		
+		# Find all td fields in the row (non-unique field)
+		all_td = row.find_all('td')
+
+		# Grab the close price, which is index [3] of the non-unique td fields
+		close = all_td[3].text
+
+	# Except clause to continue past any errors / rows which do not contain the index name or close price
+	except Exception as e:
+		continue
+
+	# As the last step in the for loop, write the results of each element scraped to the CSV file
+	csv_writer.writerow([index_name, close])
+
+# At the very end of the script, close the CSV file to ensure memory is managed
+csv_file.close()
 {% endhighlight %}
 
-<h3></h3>
-{% highlight ruby %}
-{% endhighlight %}
+The final script I created does not 100% resemble the above instructions as it includes a refactoring for capturing data from multiple fields, replacing non-numerical data with zeros etc.
+
+The final script can be downloaded <a href="https://github.com/toddy86/basic_webscraper.git">here</a>
+
+---
+<h3 id="bs_syntax">BeautifulSoup Syntax</h3>
+Source: <a href="https://gist.github.com/yoki/b7f2fcef64c893e307c4c59303ead19a">https://gist.github.com/yoki/b7f2fcef64c893e307c4c59303ead19a</a>
+
+<script src="https://gist.github.com/yoki/b7f2fcef64c893e307c4c59303ead19a.js"></script>
+
