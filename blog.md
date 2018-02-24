@@ -9,7 +9,7 @@ permalink: /blog/
 The results of me thinking for too long
 
 
-<h3><a href="{{ site.url | relative_url }}/blog/quotes">Quotes</a></h3>
+<h3><a href="{{ site.url | relative_url }}/quotes">Quotes</a></h3>
 A collection of maxims to ponder on
 
 
