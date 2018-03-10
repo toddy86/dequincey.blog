@@ -1,12 +1,72 @@
+- id: galleries/patagonia
+  name: Patagonia
+  description: 
+  imagefolder: ../images/patagonia
+  images:
+  - thumb: pat1.jpg
+  - thumb: pat2.jpg
+  - thumb: pat3.jpg
+  - thumb: pat4.jpg  
+  - thumb: pat5.jpg
+  - thumb: pat6.jpg
+  - thumb: pat7.jpg
+  - thumb: pat8.jpg
+
+- id: galleries/argentina
+  name: Argentina
+  description: 
+  imagefolder: ../images/argentina
+  images:
+  - thumb: falls6.jpg
+  - thumb: falls5.jpg
+  - thumb: falls4.jpg
+  - thumb: falls3.jpg
+  - thumb: falls2.jpg
+  - thumb: falls1.jpg
+  - thumb: butterfly1.jpg
+  - thumb: butterfly2.jpg
+  - thumb: butterfly3.jpg
+  - thumb: crypt1.jpg
+  - thumb: crypt2.jpg
+
+- id: galleries/chili
+  name: Chili
+  description: 
+  imagefolder: ../images/chili
+  images:
+  - thumb: deadrailway1.jpg
+  - thumb: deadrailway2.jpg
+  - thumb: deadrailway3.jpg
+  - thumb: deadrailway4.jpg
+  - thumb: saltflats1.jpg
+  - thumb: saltflats2.jpg
+  - thumb: saltflats3.jpg
+  - thumb: saltflats4.jpg
+  - thumb: saltflats5.jpg
+  - thumb: saltflats6.jpg
+  - thumb: saltflats7.jpg
+  - thumb: saltflats8.jpg
+  - thumb: saltflats9.jpg
+  - thumb: saltflats10.jpg
+  - thumb: dessert1.jpg
+  - thumb: dessert2.jpg
+  - thumb: dessert3.jpg
+  - thumb: dessert4.jpg
+  - thumb: dessert5.jpg
+  - thumb: dessert6.jpg
+  - thumb: graffiti1.jpg
+  - thumb: graffiti2.jpg
+  - thumb: graffiti3.jpg
+  - thumb: graffiti4.jpg
+
+
 - id: galleries/bolivia
   name: Bolivia
   description: Less poetic description than Peru and more photos coming soon…
   imagefolder: ../images/bolivia
   images:
-  - name: IMG_20170611_092455_583.jpg
-    thumb: IMG_20170611_092455_583.jpg
-  - name: IMG_20170603_013931_039.jpg
-    thumb: IMG_20170603_013931_039.jpg
+  - thumb: IMG_20170611_092455_583.jpg
+  - thumb: IMG_20170603_013931_039.jpg
 
 - id: galleries/peru
   name: Peru
@@ -150,6 +210,22 @@
   - thumb: Silverback-Gorrila-San-Diego-Zoo-USA.jpg
   - thumb: Sister-Cities-of-LA-Los-Angeles-USA.jpg
   - thumb: XXXX-San-Diego-USA.jpg 
+
+
+- id: galleries/france
+  name: France
+  description: 
+  imagefolder: ../images/france
+  images:
+  - thumb: tower.jpg
+  - thumb: cocktails.jpg
+  - thumb: flowers.jpg
+  - thumb: flowers2.jpg
+  - thumb: icecream.jpg
+  - thumb: vineyards.jpg
+  - thumb: cellar1.jpg
+  - thumb: cellar2.jpg
+
 
 # - id: 
 #   name: 
