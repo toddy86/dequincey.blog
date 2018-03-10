@@ -8,9 +8,7 @@
   - thumb: pat3.jpg
   - thumb: pat4.jpg  
   - thumb: pat5.jpg
-  - thumb: pat6.jpg
   - thumb: pat7.jpg
-  - thumb: pat8.jpg
 
 - id: galleries/argentina
   name: Argentina
@@ -225,6 +223,16 @@
   - thumb: vineyards.jpg
   - thumb: cellar1.jpg
   - thumb: cellar2.jpg
+
+
+- id: galleries/tasmania
+  name: Tasmania
+  description: 
+  imagefolder: ../images/tasmania
+  images:
+  - thumb: launceston1.jpg
+  - thumb: launceston2.jpg
+
 
 
 # - id: 
