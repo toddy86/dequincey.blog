@@ -14,6 +14,6 @@ A collection of maxims to ponder on
 
 
 <h3><a href="{{ "/galleries" | relative_url }}">Photos</a></h3>
-My view of the world through my Huawei P9
+The view of the world through my Huawei P9
 
 
