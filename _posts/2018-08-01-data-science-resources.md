@@ -23,16 +23,11 @@ pip install fastai
 {% endhighlight %}
 
 
-<span></span>
+<p></p>
 <h3><a href="https://github.com/EpistasisLab/tpot">TPOT</a></h3>
-
-A Python Automated Machine Learning tool that optimizes machine learning pipelines using genetic programming.
-
 TPOT (Tree-based Pipeline Optimization Tool) is an automated machine learning tool that optimizes machine learning pipelines using genetic programming.
 
-TPOT is built on top of Scikit-learn and it automates things like feature selection, model selection, feature construction etc. 
-
-It automates the most tedious parts of machine learning by exploring thousands of possible pipelines to find the best one for the data, and then it provides you with the Python code for the best pipeline it found for manual exploration and tweaking.
+TPOT is built on top of Scikit-learn and it automates the most tedious parts of machine learning like feature selection, model selection, feature construction, etc, by exploring thousands of possible pipelines to find the best one for the data. It then provides you with the Python code for the best pipeline it found for manual exploration and tweaking.
 
 Follow the installation instructions: <a href="http://epistasislab.github.io/tpot/installing/">Installation Guide</a>
 
