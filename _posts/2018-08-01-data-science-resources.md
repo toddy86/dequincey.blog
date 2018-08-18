@@ -4,7 +4,7 @@ title: Data Science Resources
 categories: projects
 ---
 
-An living and ever changing library of useful technologies, libraries and platforms for data science.
+A living and ever changing library of useful technologies, libraries and platforms for data science.
 
 <!-- more -->
 
