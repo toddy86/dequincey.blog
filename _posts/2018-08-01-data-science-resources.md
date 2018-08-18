@@ -19,10 +19,9 @@ TPOT is built on top of Scikit-learn and it automates things like feature select
 
 It automates the most tedious parts of machine learning by exploring thousands of possible pipelines to find the best one for the data, and then it provides you with the Python code for the best pipeline it found for manual exploration and tweaking.
 
-{% highlight ruby %}
 # Follow the installation instructions
 <a href="http://epistasislab.github.io/tpot/installing/">Installation Guide</a>
-
+{% highlight ruby %}
 # Then install TPOT
 pip install tpot
 {% endhighlight %}
@@ -33,8 +32,6 @@ Featuretools is a framework to perform automated feature engineering. It excels 
 {% highlight ruby %}
 # Install Featuretools
 pip install featuretools
-
+{% endhighlight %}
 # Follow the quickstart guide
 <a href="https://docs.featuretools.com/#minute-quick-start">5 minute Quick Start</a>
-{% endhighlight %}
-
