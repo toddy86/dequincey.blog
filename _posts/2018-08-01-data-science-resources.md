@@ -26,8 +26,6 @@ pip install fastai
 <h3><a href="https://github.com/fastai/fast_progress">Fast progress</a></h3>
 Simple and flexible progress bar for Jupyter Notebook and console, developed by the fast.ai team
 
-![Example of fast progress]({{ "/assets/images/fast_progress.gif"|absolute_url}})
-
 {% highlight ruby %}
 # Installation
 pip install fast_progress
