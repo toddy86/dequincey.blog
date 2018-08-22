@@ -61,13 +61,13 @@ Then follow the quickstart guide: <a href="https://docs.featuretools.com/#minute
 <h3>Linear Algebra</h3>
 
 <ul>
-	<li><a href="https://stanford.edu/~shervine/teaching/cs-229/refresher-algebra-calculus.html"></a>Stanford CS 229 Linear Algebra Cheat Sheet</li>
+	<li><a href="https://stanford.edu/~shervine/teaching/cs-229/refresher-algebra-calculus.html">Stanford CS 229 Linear Algebra Cheat Sheet</a></li>
 </ul>
 
 <h3>Statistics</h3>
 
 <ul>
-	<li><a href="https://stanford.edu/~shervine/teaching/cs-229/refresher-probabilities-statistics.html"></a>Stanford CS 229 Probabilities and Statistics Cheat Sheet</li>
+	<li><a href="https://stanford.edu/~shervine/teaching/cs-229/refresher-probabilities-statistics.html">Stanford CS 229 Probabilities and Statistics Cheat Sheet</a></li>
 </ul>
 
 <h2>Machine Learning, Deep Learning and AI</h2>
@@ -75,8 +75,8 @@ Then follow the quickstart guide: <a href="https://docs.featuretools.com/#minute
 <h3>Machine Learning</h3>
 
 <ul>
-	<li><a href="https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-supervised-learning.html"></a>Stanford CS 229 Supervised Learning Cheat Sheet</li>
-	<li><a href="https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-unsupervised-learning.html"></a>Stanford CS 229 Unsupervised Learning Cheat Sheet</li>
-	<li><a href="https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-deep-learning.html"></a>Standford CS 229 Deep Learning Cheat Sheet</li>
+	<li><a href="https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-supervised-learning.html">Stanford CS 229 Supervised Learning Cheat Sheet</a></li>
+	<li><a href="https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-unsupervised-learning.html">Stanford CS 229 Unsupervised Learning Cheat Sheet</a></li>
+	<li><a href="https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-deep-learning.html">Standford CS 229 Deep Learning Cheat Sheet</a></li>
 	<li><a href="https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-machine-learning-tips-and-tricks.html">Standford VS 229 Machine Learning Tips and Tricks Cheat Sheet</a></li>
 </ul>
