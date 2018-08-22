@@ -9,10 +9,13 @@ A living and ever changing library of useful technologies, libraries and platfor
 <!-- more -->
 
 <h3>Contents</h3>
+
 <ul>
 	<li><a href="#python">Python</a></li>
 	<li><a href="#mathsandstatistics">Maths and Statistics</a></li>
+	<li><a href="#machnielearning">Machine Learning, Deep Learning and AI</a></li>
 </ul>
+
 
 <h2 id="python">Python</h2>
 
@@ -64,21 +67,19 @@ Then follow the quickstart guide: <a href="https://docs.featuretools.com/#minute
 
 <h2 id="mathsandstatistics">Maths and Statistics</h2>
 
-<h3>Linear Algebra</h3>
+<h3 id="linearalgebra">Linear Algebra</h3>
 
 <ul>
 	<li><a href="https://stanford.edu/~shervine/teaching/cs-229/refresher-algebra-calculus.html">Stanford CS 229 Linear Algebra Cheat Sheet</a></li>
 </ul>
 
-<h3>Statistics</h3>
+<h3 id="statistics">Statistics</h3>
 
 <ul>
 	<li><a href="https://stanford.edu/~shervine/teaching/cs-229/refresher-probabilities-statistics.html">Stanford CS 229 Probabilities and Statistics Cheat Sheet</a></li>
 </ul>
 
-<h2>Machine Learning, Deep Learning and AI</h2>
-
-<h3>Machine Learning</h3>
+<h2 id="machnielearning">Machine Learning, Deep Learning and AI</h2>
 
 <ul>
 	<li><a href="https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-supervised-learning.html">Stanford CS 229 Supervised Learning Cheat Sheet</a></li>
