@@ -85,5 +85,5 @@ Then follow the quickstart guide: <a href="https://docs.featuretools.com/#minute
 	<li><a href="https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-supervised-learning.html">Stanford CS 229 Supervised Learning Cheat Sheet</a></li>
 	<li><a href="https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-unsupervised-learning.html">Stanford CS 229 Unsupervised Learning Cheat Sheet</a></li>
 	<li><a href="https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-deep-learning.html">Standford CS 229 Deep Learning Cheat Sheet</a></li>
-	<li><a href="https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-machine-learning-tips-and-tricks.html">Standford VS 229 Machine Learning Tips and Tricks Cheat Sheet</a></li>
+	<li><a href="https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-machine-learning-tips-and-tricks.html">Standford CS 229 Machine Learning Tips and Tricks Cheat Sheet</a></li>
 </ul>
