@@ -8,7 +8,13 @@ A living and ever changing library of useful technologies, libraries and platfor
 
 <!-- more -->
 
-<h2>Python</h2>
+<h3>Contents</h3>
+<ul>
+	<li><a href="#python">Python</a></li>
+	<li><a href="#mathsandstatistics">Maths and Statistics</a></li>
+</ul>
+
+<h2 id="python">Python</h2>
 
 <h3><a href="https://github.com/fastai/fastai">fast.ai</a></h3>
 Fast.ai is a machine and deep learning library designed by Jeremy Howard with the intention to allow developers without a maths background to develop world class ML/DL models in the shortest time possible. Built on PyTorch.
@@ -56,7 +62,7 @@ Then follow the quickstart guide: <a href="https://docs.featuretools.com/#minute
 
 
 
-<h2>Maths and Statistics</h2>
+<h2 id="mathsandstatistics">Maths and Statistics</h2>
 
 <h3>Linear Algebra</h3>
 
