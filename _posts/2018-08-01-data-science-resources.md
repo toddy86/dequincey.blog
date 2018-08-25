@@ -40,6 +40,13 @@ Simple and flexible progress bar for Jupyter Notebook and console, developed by 
 pip install fast_progress
 {% endhighlight %}
 
+<h3><a href="https://github.com/chrispaulca/waterfall">Waterfall Charts</a></h3>
+Waterfall charts for visualising marginal value contributions using a starting value (bias). 
+
+{% highlight ruby %}
+# Installation
+pip install waterfallcharts
+{% endhighlight %}
 
 <h3><a href="https://github.com/EpistasisLab/tpot">TPOT</a></h3>
 TPOT (Tree-based Pipeline Optimization Tool) is an automated machine learning tool that optimizes machine learning pipelines using genetic programming.
