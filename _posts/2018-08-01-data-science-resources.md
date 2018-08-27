@@ -70,6 +70,18 @@ pip install featuretools
 Then follow the quickstart guide: <a href="https://docs.featuretools.com/#minute-quick-start">5 minute Quick Start</a>
 
 
+<h3><a href="https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html">Jupyter nbextensions</a></h3>
+The jupyter_contrib_nbextensions package contains a collection of community-contributed unofficial extensions that add functionality to the Jupyter notebook. These extensions are mostly written in Javascript and will be loaded locally in your browser.
+
+{% highlight ruby %}
+# Install Python package
+pip install jupyter_contrib_nbextensions
+
+# Install JavaScript and CSS files
+jupyter contrib nbextension install --user
+{% endhighlight %}
+<a href="https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html">Documentation</a>
+
 
 
 <h2 id="mathsandstatistics">Maths and Statistics</h2>
