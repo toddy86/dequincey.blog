@@ -17,7 +17,7 @@ title: todd.dequincey
 author: Todd de Quincey
 description: The home of Todd
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://toddy86.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://dequincey.blog" # the base hostname & protocol for your site, e.g. http://example.com
 lang: en
 timezone: UTC
 exclude:
