@@ -252,7 +252,7 @@ data = pd.read_csv('train.csv')
 data.plot.scatter('x', 'y')
 ```
 
-![png](linear-regression/scatter_plot1.png)
+![png](assets/images/linear-regression/scatter_plot1.png)
 
 
 The intial data indicates an approximate linear relationship.
