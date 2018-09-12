@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Creating a Linear Regression Model from Scratch
+title: Linear Regression from Scratch
 categories: projects
 ---
 
