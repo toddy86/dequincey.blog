@@ -15,7 +15,7 @@ To learn how to code a basic machine learning algorithm from scratch and to ensu
 <ul>
 	<li>How to code a basic machine learning algorithm</li>
 	<li>How the Python classes work (i.e. passing self)</li>
-	<li>How to use %prun in Jupyter notebooks to profile an algorithm to see which parts are computationally expensive<li>
+	<li>How to use %prun in Jupyter notebooks to profile an algorithm to see which parts are computationally expensive</li>
 </ul>
 
 <i>DISCLAIMER: This algorithm is NOT functionally complete, optimised for speed, nor suitable for production implementation. It has been created as a tutorial for myself to go through the motions of learning this algorithm more deeply. All that said, I hope it is useful to someone else other than myself. I still need to complete some work to tidy up the class.</i>
