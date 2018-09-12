@@ -23,7 +23,6 @@ To learn how to code a basic machine learning algorithm from scratch and to ensu
 If you have any feedback, please feel free to connect with me on LinkedIn and let me know. 
 
 
-### Objective and Purpose
 
 The purpose of this notebook is learn the ins and outs of the linear regression model by coding it from scratch. 
 
@@ -244,15 +243,71 @@ class LinearRegression():
 ```python
 # Import data x = age, y = bloodpressure
 data = pd.read_csv('train.csv')
+data.head(3)
 ```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x</th>
+      <th>y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>39</td>
+      <td>144</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>45</td>
+      <td>138</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>47</td>
+      <td>145</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
 
 
 ```python
 # Display the data in a scatter plot to see if there is an approximate linear relationship
-data.plot.scatter('x', 'y')
+x = data.loc[:, 'x']
+y = data.loc[:, 'y']
+
+fig, ax = plt.figure(), plt.axes()
+plt.title('Age vs Blood Presure')
+plt.ylabel('Blood Pressure')
+plt.xlabel('Age')
+plt.scatter(x, y);
 ```
 
-![png](/assets/images/linear-regression/output_8_1.png)
+
+![png](/assets/images/linear-regression/output_8_0.png)
 
 
 The intial data indicates an approximate linear relationship.
@@ -307,18 +362,11 @@ There is a reasonable R2 value, so thus far linear regression looks like a good 
 
 ```python
 # Check the residuals of the model to ensure linear regression is appropriate
-m.df_train.plot.scatter('x', 'residuals')
+m.df_train.plot.scatter('x', 'residuals');
 ```
 
 
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x110e51080>
-
-
-
-
-![png](/assets/images/linear-regression/output_16_1.png)
+![png](/assets/images/linear-regression/output_16_0.png)
 
 
 There does not appear to be any patterns or trends with the residuals, therefore linear regression appears ok to use.
@@ -333,22 +381,16 @@ x = m.df_train.x
 # Plot the scatter plot
 fig, ax = plt.subplots()
 plt.ylabel('Blood Pressure')
+plt.xlabel('Age')
 plt.suptitle('Training Set')
 plt.title('Y vs Line of Best Fit')
 plt.scatter(x, y, c='blue')
 plt.plot(x, y_hat, c='red')
-plt.legend()
+plt.legend();
 ```
 
 
-
-
-    <matplotlib.legend.Legend at 0x11100cfd0>
-
-
-
-
-![png](/assets/images/linear-regression/output_18_1.png)
+![png](/assets/images/linear-regression/output_18_0.png)
 
 
 
@@ -374,21 +416,16 @@ x = m.df_valid.x
 # Plot the scatter plot
 fig, ax = plt.subplots()
 plt.ylabel('Blood Pressure')
+plt.xlabel('Age')
 plt.suptitle('Validation Set')
 plt.title('Y vs Predictions')
 plt.scatter(x, y, c='blue')
 plt.scatter(x, y_hat, c='red')
-plt.legend()
+plt.legend();
 ```
 
 
+![png](/assets/images/linear-regression/output_20_0.png)
 
-
-    <matplotlib.legend.Legend at 0x1110f55f8>
-
-
-
-
-![png](/assets/images/linear-regression/output_20_1.png)
 
 
