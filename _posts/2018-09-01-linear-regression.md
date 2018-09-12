@@ -252,7 +252,7 @@ data = pd.read_csv('train.csv')
 data.plot.scatter('x', 'y')
 ```
 
-![png](../assets/images/linear-regression/output_8_1.png)
+![png](/assets/images/linear-regression/output_8_1.png)
 
 
 The intial data indicates an approximate linear relationship.
@@ -318,7 +318,7 @@ m.df_train.plot.scatter('x', 'residuals')
 
 
 
-![png](../assets/images/linear-regression/output_16_1.png)
+![png](/assets/images/linear-regression/output_16_1.png)
 
 
 There does not appear to be any patterns or trends with the residuals, therefore linear regression appears ok to use.
@@ -348,7 +348,7 @@ plt.legend()
 
 
 
-![png](../assets/images/linear-regression/output_18_1.png)
+![png](/assets/images/linear-regression/output_18_1.png)
 
 
 
@@ -389,6 +389,6 @@ plt.legend()
 
 
 
-![png](../assets/images/linear-regression/output_20_1.png)
+![png](/assets/images/linear-regression/output_20_1.png)
 
 
