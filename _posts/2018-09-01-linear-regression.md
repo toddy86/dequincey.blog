@@ -18,8 +18,6 @@ To learn how to code a basic machine learning algorithm from scratch and to ensu
 	<li>How to use %prun in Jupyter notebooks to profile an algorithm to see which parts are computationally expensive<li>
 </ul>
 
-
-<h3>Background</h3>
 <i>DISCLAIMER: This algorithm is NOT functionally complete, optimised for speed, nor suitable for production implementation. It has been created as a tutorial for myself to go through the motions of learning this algorithm more deeply. All that said, I hope it is useful to someone else other than myself. I still need to complete some work to tidy up the class.</i>
 
 If you have any feedback, please feel free to connect with me on LinkedIn and let me know. 
