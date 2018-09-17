@@ -82,7 +82,22 @@ jupyter contrib nbextension install --user
 {% endhighlight %}
 <a href="https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html">Documentation</a>
 
+<h3><a href="https://github.com/ResidentMario/missingno">Missingno</a></h3>
+A great Python package to visually display the extent of missing values in a dataset.
 
+{% highlight python %}
+# Install Python package
+pip install quilt
+quilt install ResidentMario/missingno_data
+
+# Import
+import missingno as msno
+
+# Bar chart example
+msno.bar(collisions.sample(1000))
+
+{% endhighlight %}
+<a href="https://github.com/ResidentMario/missingno">Documentation</a>
 
 <h2 id="mathsandstatistics">Maths and Statistics</h2>
 
