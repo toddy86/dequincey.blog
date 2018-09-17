@@ -26,7 +26,7 @@ Accompanying the library is the <a href="http://www.fast.ai/">fast.ai MOOC</a>, 
 
 The <a href="http://www.fast.ai/topics/">fast.ai blog</a> is also an invaluable resource
 
-{% highlight ruby %}
+{% highlight python %}
 # Installation
 pip install fastai
 {% endhighlight %}
@@ -35,7 +35,7 @@ pip install fastai
 <h3><a href="https://github.com/fastai/fast_progress">Fast progress</a></h3>
 Simple and flexible progress bar for Jupyter Notebook and console, developed by the fast.ai team
 
-{% highlight ruby %}
+{% highlight python %}
 # Installation
 pip install fast_progress
 {% endhighlight %}
@@ -43,7 +43,7 @@ pip install fast_progress
 <h3><a href="https://github.com/chrispaulca/waterfall">Waterfall Charts</a></h3>
 Waterfall charts for visualising marginal value contributions using a starting value (bias). 
 
-{% highlight ruby %}
+{% highlight python %}
 # Installation
 pip install waterfallcharts
 {% endhighlight %}
@@ -55,7 +55,7 @@ TPOT is built on top of Scikit-learn and it automates the most tedious parts of 
 
 Follow the installation instructions: <a href="http://epistasislab.github.io/tpot/installing/">Installation Guide</a>
 
-{% highlight ruby %}
+{% highlight python %}
 # Then install TPOT
 pip install tpot
 {% endhighlight %}
@@ -63,7 +63,7 @@ pip install tpot
 <h3><a href="https://www.featuretools.com/">FeatureTools</a></h3>
 Featuretools is a framework to perform automated feature engineering. It excels at transforming temporal and relational datasets into feature matrices for machine learning.
 
-{% highlight ruby %}
+{% highlight python %}
 # Installation
 pip install featuretools
 {% endhighlight %}
@@ -73,7 +73,7 @@ Then follow the quickstart guide: <a href="https://docs.featuretools.com/#minute
 <h3><a href="https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html">Jupyter nbextensions</a></h3>
 The jupyter_contrib_nbextensions package contains a collection of community-contributed unofficial extensions that add functionality to the Jupyter notebook. These extensions are mostly written in Javascript and will be loaded locally in your browser.
 
-{% highlight ruby %}
+{% highlight python %}
 # Install Python package
 pip install jupyter_contrib_nbextensions
 
