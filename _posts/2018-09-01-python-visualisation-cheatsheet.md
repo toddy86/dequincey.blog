@@ -7,13 +7,13 @@ categories: projects
 A cheat sheet of core data visualisation techniques using matplotlib and seaborn.
 
 <!-- more -->
-### Project goal
+## Project goal
 
 For one reason or another, the matplotlib syntax constantly escapes me. So, I have created this notebook to slowly work through the ins and outs of matplotlib and seaborn in hope to 1) cement the knowledge in my head and/or 2) create a personal cheat sheet which I can refer to when I undoubtably forget the syntax again.
 
 Whilst there are a range of matplotlib and seaborn resources and cheat sheets already available, the best way for me to learn is to write, explain and teach. Thus, my recreation of the matplotlib basics wheel here.
 
-### Resources
+## Resources
 
 The following is a list of useful matplotlib and seaborn resources:
 <ul>
@@ -24,7 +24,7 @@ The following is a list of useful matplotlib and seaborn resources:
 
 
 
-### Import dependencies
+## Import dependencies
 
 
 ```python
@@ -38,7 +38,7 @@ import warnings
 warnings.filterwarnings('ignore')
 ```
 
-### Load dummy dataset
+## Load dummy dataset
 The seaborn package comes with some pre-defined datasets to make our life easy, so we will load the titanic dataset
 
 
@@ -162,9 +162,9 @@ df.head()
 
 
 
-### Basic plots
+## Basic plots
 
-#### Setting a plot style
+### Setting a plot style
 
 
 ```python
@@ -177,7 +177,7 @@ There are two basic methods to plotting with matplotlib:
 1. Using the matlab style syntax
 2. Using object-oriented style syntax
 
-##### matlab style
+#### matlab style
 
 
 ```python
@@ -201,7 +201,7 @@ plt.bar(days, tip_amt);
 ![png](/assets/images/data-vis/output_16_0.png)
 
 
-##### object-oriented style
+#### object-oriented style
 NB: Could plot directly from DF - this is covered later
 
 
@@ -219,7 +219,7 @@ ax.bar(days, tip_amt);
 
 For simplicity, the rest of this notebook uses the object-orientated style of plotting, as this is generally more useful as plotting needs get more complicated.
 
-##### Titles
+#### Titles
 
 
 ```python
@@ -237,7 +237,7 @@ fig
 
 
 
-##### Axis Labels
+#### Axis Labels
 
 
 ```python
@@ -256,7 +256,7 @@ fig
 
 
 
-##### Legends
+#### Legends
 
 
 ```python
@@ -274,7 +274,7 @@ fig
 
 
 
-#### Annotating plots with text
+### Annotating plots with text
 Use ax.text(x_pos, y_pos, 'text') on object-oriented plots
 
 
@@ -291,7 +291,7 @@ fig
 
 
 
-#### Annotating plots with arrows and text
+### Annotating plots with arrows and text
 Use ax.annotate('text', xy=(coord_of_arrow), xytext=(coord_of_text)) on object-oriented plots
 
 
@@ -312,7 +312,7 @@ fig
 
 
 
-##### Plotting multiple elements
+#### Plotting multiple elements
 
 
 ```python
@@ -339,9 +339,9 @@ ax2.legend(['Tip', 'Total Bill']);
 ![png](/assets/images/data-vis/output_31_0.png)
 
 
-### Multiple plots
+## Multiple plots
 
-#### subplots
+### subplots
 
 
 ```python
@@ -364,7 +364,7 @@ ax[1].bar(days, bill_amt, color='orange')
 ![png](/assets/images/data-vis/output_34_1.png)
 
 
-#### Creating a grid
+### Creating a grid
 
 
 ```python
@@ -385,7 +385,7 @@ ax[1,2].text(0.5, 0.5, str((1, 2)), fontsize=18, ha='center');
 ![png](/assets/images/data-vis/output_36_0.png)
 
 
-####  GridSpec for custom layouts
+###  GridSpec for custom layouts
 Below example adapted from the <a href="https://github.com/jakevdp/PythonDataScienceHandbook"> Data Science Handbook</a>.
 
 
@@ -419,7 +419,7 @@ y_hist.invert_xaxis()
 ![png](/assets/images/data-vis/output_38_0.png)
 
 
-### Plotting with pandas
+## Plotting with pandas
 Rather than splitting out variables from a pandas dataframe into separate variables for plotting, we can directly plot from the dataframe using the pd.plot() method. 
 
 
@@ -432,7 +432,7 @@ df.plot.scatter('total_bill', 'tip');
 ![png](/assets/images/data-vis/output_40_0.png)
 
 
-##### Combing with pandas groupby
+#### Combing with pandas groupby
 
 
 ```python
@@ -454,15 +454,15 @@ df.groupby('day')[['tip', 'total_bill']].sum().plot(kind='bar', subplots=True);
 ![png](/assets/images/data-vis/output_43_0.png)
 
 
-### Seaborn
+## Seaborn
 Seaborn is a package built on top of matplotlib which extends its functionality (e.g. adds violin plots) and provides some aesthetic improvements to the base matplotlib style of plotting.
 
 Many of the below examples are adapted from the <a href"https://seaborn.pydata.org/tutorial.html">seaborn docs</a>
 
-#### Categorical plots
+### Categorical plots
 Can either use the sns.catplot() method and pass in the kind arg, or directly create the required plot by calling the appropriate sns plot (e.g. sns.swarmplot() )
 
-##### Basic plot
+#### Basic plot
 
 
 ```python
@@ -474,7 +474,7 @@ sns.catplot(x = 'day', y = 'tip', kind='swarm', data = df);
 ![png](/assets/images/data-vis/output_47_0.png)
 
 
-##### Adding hue
+#### Adding hue
 
 
 ```python
@@ -486,7 +486,7 @@ sns.catplot(x = 'day', y = 'tip', kind='swarm', hue='sex', data = df);
 ![png](/assets/images/data-vis/output_49_0.png)
 
 
-##### Conditional display with queries
+#### Conditional display with queries
 
 
 ```python
@@ -498,7 +498,7 @@ sns.catplot(x = 'day', y = 'tip', hue = 'sex', data = df.query('tip > 2'));
 ![png](/assets/images/data-vis/output_51_0.png)
 
 
-##### Ordering
+#### Ordering
 
 
 ```python
@@ -510,7 +510,7 @@ sns.catplot(x = 'sex', y = 'tip', order=['Male', 'Female'], data = df);
 ![png](/assets/images/data-vis/output_53_0.png)
 
 
-##### Displaying multiple plots
+#### Displaying multiple plots
 
 
 ```python
@@ -521,10 +521,10 @@ sns.catplot(x='day', y='tip', hue='sex', col='time', kind='bar', data=df);
 ![png](/assets/images/data-vis/output_55_0.png)
 
 
-#### Continious plots
+### Continious plots
 Similar to categorical plots, we can either use the relplot() "parent" method and pass in the kind arg, or directly choose the type of plot by calling it (e.g. sns.scatterplot() ).
 
-##### Basic plot
+#### Basic plot
 
 
 ```python
@@ -536,7 +536,7 @@ sns.relplot(x='total_bill', y='tip', data=df);
 ![png](/assets/images/data-vis/output_58_0.png)
 
 
-##### Adding hue and styles
+#### Adding hue and styles
 
 
 ```python
@@ -548,7 +548,7 @@ sns.relplot(x='total_bill', y='tip', hue='sex', style='smoker', data=df);
 ![png](/assets/images/data-vis/output_60_0.png)
 
 
-##### Multiple plots
+#### Multiple plots
 Similar to catplot(), we can display multiple plots for continious variables.
 
 
@@ -571,9 +571,9 @@ sns.relplot(x='total_bill', y='tip', col='size', col_wrap=3, data=df);
 ![png](/assets/images/data-vis/output_63_0.png)
 
 
-### Types of plots
+## Types of plots
 
-#### matplotlib plots
+### matplotlib plots
 
 
 ```python
@@ -642,7 +642,7 @@ Other matplotlib plots which aren't shown above include:
 - kernal density estimation
 - line
 
-#### seaborn plots
+### Seaborn plots
 Seaborn includes all of the same plots as matplotlib, with some additional plots.
 
 
