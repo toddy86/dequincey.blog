@@ -177,7 +177,7 @@ There are two basic methods to plotting with matplotlib:
 1. Using the matlab style syntax
 2. Using object-oriented style syntax
 
-#### matlab style
+#### Matlab style
 
 
 ```python
@@ -201,7 +201,7 @@ plt.bar(days, tip_amt);
 ![png](/assets/images/data-vis/output_16_0.png)
 
 
-#### object-oriented style
+#### Object-oriented style
 NB: Could plot directly from DF - this is covered later
 
 
@@ -341,7 +341,7 @@ ax2.legend(['Tip', 'Total Bill']);
 
 ## Multiple plots
 
-### subplots
+### Subplots
 
 
 ```python
@@ -573,7 +573,7 @@ sns.relplot(x='total_bill', y='tip', col='size', col_wrap=3, data=df);
 
 ## Types of plots
 
-### matplotlib plots
+### Matplotlib plots
 
 
 ```python
