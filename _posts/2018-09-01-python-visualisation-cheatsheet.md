@@ -4,15 +4,10 @@ title: Python Visulalisation Cheat Sheet
 categories: projects
 ---
 
-A cheat sheet notebook of core data visualisation techniques using matplotlib and seaborn.
+A cheat sheet of core data visualisation techniques using matplotlib and seaborn.
 
 <!-- more -->
-<b>Project goal</b> 
-
-To learn how to effectively and efficiently use the popular Python data visualisation libraries of matplotlib and seaborn for creating data visualisations. 
-
-
-## Objective
+### Project goal
 
 For one reason or another, the matplotlib syntax constantly escapes me. So, I have created this notebook to slowly work through the ins and outs of matplotlib and seaborn in hope to 1) cement the knowledge in my head and/or 2) create a personal cheat sheet which I can refer to when I undoubtably forget the syntax again.
 
@@ -21,10 +16,11 @@ Whilst there are a range of matplotlib and seaborn resources and cheat sheets al
 ### Resources
 
 The following is a list of useful matplotlib and seaborn resources:
-- <a href"https://realpython.com/python-matplotlib-guide/">Real Python: Python Plotting with Matplotlib Guide</a>
-- <a href"https://seaborn.pydata.org/tutorial.html">Seaborn Tutorial</a>
-- <a href"https://github.com/jakevdp/PythonDataScienceHandbook">Python Data Science Handbook</a>
-
+<ul>
+    <li><a href"https://realpython.com/python-matplotlib-guide/">Real Python: Python Plotting with Matplotlib Guide</a></li>
+    <li><a href"https://seaborn.pydata.org/tutorial.html">Seaborn Tutorial</a></li>
+    <li><a href"https://github.com/jakevdp/PythonDataScienceHandbook">Python Data Science Handbook</a></li>
+</ul>
 
 
 
