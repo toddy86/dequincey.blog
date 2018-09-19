@@ -17,9 +17,9 @@ Whilst there are a range of matplotlib and seaborn resources and cheat sheets al
 
 The following is a list of useful matplotlib and seaborn resources:
 <ul>
-    <li><a href"https://realpython.com/python-matplotlib-guide/">Real Python: Python Plotting with Matplotlib Guide</a></li>
-    <li><a href"https://seaborn.pydata.org/tutorial.html">Seaborn Tutorial</a></li>
-    <li><a href"https://github.com/jakevdp/PythonDataScienceHandbook">Python Data Science Handbook</a></li>
+    <li><a href="https://realpython.com/python-matplotlib-guide/">Real Python: Python Plotting with Matplotlib Guide</a></li>
+    <li><a href="https://seaborn.pydata.org/tutorial.html">Seaborn Tutorial</a></li>
+    <li><a href="https://github.com/jakevdp/PythonDataScienceHandbook">Python Data Science Handbook</a></li>
 </ul>
 
 
