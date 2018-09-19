@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Python Visulalisation Cheat Sheet
+title: Python Visualisation Cheat Sheet
 categories: projects
 ---
 
