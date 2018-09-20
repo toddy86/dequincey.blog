@@ -6,7 +6,7 @@ categories: tutorial
 
 A step-by-step guide on how to access and edit the bash profile on a Mac.
 
-!-- more -->
+<!-- more -->
 <b>Project goal</b> 
 
 Learn how to edit a bash profile and document the process as tutorials for editing the bash profile do not appear to be very plentiful.
