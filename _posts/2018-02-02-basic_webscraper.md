@@ -26,7 +26,7 @@ BeautifulSoup is especially useful for quickly build small or one-off web scrapp
 
 More complicated projects that require multipage scraping etc might be better built using <a href="https://scrapy.org/">scrapy</a>.
 
----
+
 <h3>Step 1: Install Required Packages</h3>
 
 All of the below (except for Python) come pre-installed with the Anaconda package, but they can be manually installed via pip if required.
@@ -42,7 +42,7 @@ pip install lxml
 pip install requests
 {% endhighlight %}
 
----
+
 <h3>Step 2: Become familar with the DOM of the website</h3>
 Access the webpage you want to scrape and <a href="https://developer.chrome.com/devtools">inspect the DOM</a>. Spend some time becoming familiar with the structure of the DOM and the css attributes of the content you want to scrape.  
 
