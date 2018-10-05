@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Editing Bash Profile on a Mac
+title: Editing a Bash Profile on a Mac
 categories: tutorial
 ---
 
@@ -9,9 +9,9 @@ A step-by-step guide on how to access and edit the bash profile on a Mac.
 <!-- more -->
 <b>Project goal</b> 
 
-Learn how to edit a bash profile and document the process as tutorials for editing the bash profile do not appear to be very plentiful.
+Learn how to edit a bash profile and document the process as a tutorial, as tutorials on this topic do not appear to be very plentiful.
 
-Steps 1 through to 2 relate to identifying the available Java versions. Updating the bash profile starts at step 3.
+Steps 1 to 2 relate to identifying the available Java versions. Updating the bash profile starts at step 3.
 
 ---
 <b>Lessons learnt</b>
