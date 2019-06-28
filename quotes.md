@@ -7,8 +7,6 @@ permalink: /quotes/
 
 A list of motivational and thought provoking quotes which I try to revisit as often as possible. The date next to each quote is when I stumbled across it and are listed in reverse chronological order.
 
-If you have a favourite quote you’d like to share, I’d love to hear from you todd.dequincey@gmail.com
-
 “If you don’t like something, change it. If you can’t change it, change your attitude. Don’t complain.” – Maya Angelou 2017-07-23
 
  

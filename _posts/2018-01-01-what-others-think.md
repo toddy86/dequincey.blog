@@ -1,6 +1,6 @@
 ---
 layout: post
-title: When did we start giving a shit what others think?
+title: When did we start giving a sh*t what others think?
 categories: thoughts
 ---
 
