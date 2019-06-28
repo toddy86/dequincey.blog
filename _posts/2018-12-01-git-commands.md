@@ -32,8 +32,8 @@ Learn and summarise common git commands into a cheat sheet.
 To ignore certain files and folders from being able to be committed, complete the following steps:
 
 <ul>
-	<li>Create a .gitignore file by running the following command from the terminal {% highlight ruby %}touch .gitignore{% endhighlight%}</li>
-	<li>Access the .gitignore file, either through a text editor or via the terminal using VIM {% highlight ruby %}vim .gitignore{% endhighlight%}</li>
+	<li>Create a .gitignore file by running the following command from the terminal</li>
+	<li>Access the .gitignore file, either through a text editor or via the terminal using VIM</li>
 	<li>Add files and/or folders to the ignore file</li>
 </ul>
 
