@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Global Warming
-categories: project
+categories: projects
 ---
 
 An interactive dashboard of historical temperatures of cities across the globe from 1960 until present day. 
