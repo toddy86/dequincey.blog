@@ -72,7 +72,7 @@ folder_name1/*  # Ignore everything in the folder
 
 {% endhighlight%}
 
-<a href="https://git-scm.com/docs/gitignore">gitignore documentation</a>.
+<a href="https://git-scm.com/docs/gitignore">gitignore documentation</a>
 
 
 ---
