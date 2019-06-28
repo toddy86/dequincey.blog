@@ -39,7 +39,7 @@ The data are obtained from the National Centers for Environmental Information, w
 
 The data being used is the Global Surface Summary of the Day ("GSOD") dataset, which provides daily weather records from 1929 to present day, although the data from 1973 onwards is considered the most complete. 
 
-URL: https://data.nodc.noaa.gov/cgi-bin/iso?id=gov.noaa.ncdc:C00516 
+Click <a href="https://data.nodc.noaa.gov/cgi-bin/iso?id=gov.noaa.ncdc:C00516 ">here</a> to view the data source.
 
 Data were downloaded as .tar.gz files for each calendar year. The zipped files contained a single CSV file for each weather station in the dataset. 
 
