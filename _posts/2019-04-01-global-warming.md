@@ -7,8 +7,10 @@ categories: project
 An interactive dashboard of historical temperatures of cities across the globe from 1960 until present day. 
 
 <!-- more -->
-<b>THIS PROJECT IS STILL A WORK IN PROGRESS</b> 
+<b>THIS PROJECT IS STILL A WORK IN PROGRESS</b>  
 Last updated 28 June 2019
+  
+<a href="https://github.com/toddy86/globalwarming">Git Repository</a>
 
 ## Project Goal
 The objective of this project is to create an interactive dashboard which provides information about how global warming is affecting individual cities around the globe. It is hoped that if people are able to see the impact which global warming is having on the city in which they live, that they will be more inclined to take action and help prevent further damage to the globe.
