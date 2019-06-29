@@ -82,7 +82,7 @@
   }
 
   > li {
-    margin-bottom: 40px;
+    margin-bottom: $spacing-unit;
 
     &:not(:first-child) {
       border-top: 4px solid $grey-color-light;
