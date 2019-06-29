@@ -5,8 +5,10 @@ layout: default
 <div class="home">
 
   <div>
-    <p>Hi, I'm Todd and welcome to my site.</p>
-    <p>Yes, this site is very plan. This minimalist approach is by design. I don't believe in complexity for complexities sake. Simplicty, minimialism and functionality win every time.</p>
+<p>Hi, I'm Todd and welcome to my site.</p>
+    <p>Yes, this site is plan. This is by design. We have enough unnecessary complexity in the world. I prefer simplicity, minimalism and functionality.</p>
+    <p>This site is home to my personal library of tech resources and projects. There is also a blog, where I occasionally let my mind wander of philosophical ramblings.
+</p>
   </div>
 
   {{ content }}
@@ -20,9 +22,9 @@ layout: default
 
       <li{% if lang != empty %} lang="{{ lang }}"{% endif %}>
         <header class="post-header">
-          <h2 class="post-title">
+          <h1 class="post-title">
             <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}{% if post.external-url %} &rarr;{% endif %}</a>
-          </h2>
+          </h1>
 
           <p class="post-meta">
             {{ post.date | date: "%b, %Y" }}
