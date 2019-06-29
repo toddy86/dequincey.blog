@@ -25,7 +25,7 @@ layout: default
       <li{% if lang != empty %} lang="{{ lang }}"{% endif %}>
         <header class="post-header">
           <h2 class="post-title">
-            <a class="post-link" href="{{ post.url | relative_url }}"></a>
+            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}{% if post.external-url %} &rarr;{% endif %}</a>
           </h2>
 
           <p class="post-meta">
