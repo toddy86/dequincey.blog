@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Common Git Commands
-categories: tutorial
+categories: resources
 ---
 
 A cheat sheet I have created to remind myself of common Git commands. This is obviously not an extensive list of all possible git commands. Just a list of the common ones I use. 

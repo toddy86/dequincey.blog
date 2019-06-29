@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Python Visualisation Cheat Sheet
-categories: projects
+categories: resources
 ---
 
 A cheat sheet of core data visualisation techniques using matplotlib and seaborn.

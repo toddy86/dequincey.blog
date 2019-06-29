@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Editing a Bash Profile on a Mac
-categories: tutorial
+categories: resources
 ---
 
 A step-by-step guide on how to access and edit the bash profile on a Mac.
