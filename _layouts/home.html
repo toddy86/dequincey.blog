@@ -5,7 +5,7 @@ layout: default
 <div class="home">
 
   <div>
-    <h3>Welcome</h3>
+    <h2>Welcome</h2>
     <p>Hi, I'm Todd and welcome to my site.</p>
         <p>Yes, this site is plan. This is by design. We have enough unnecessary complexity in the world. I prefer simplicity, minimalism and functionality.</p>
         <p>This site is home to my personal library of tech resources and projects. There is also a blog, where I occasionally let my mind wander of philosophical ramblings.
@@ -24,9 +24,9 @@ layout: default
 
       <li{% if lang != empty %} lang="{{ lang }}"{% endif %}>
         <header class="post-header">
-          <p class="post-title">
+          <h2 class="post-title">
             <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}{% if post.external-url %} &rarr;{% endif %}</a>
-          </p>
+          </h2>
 
           <p class="post-meta">
             {{ post.date | date: "%b, %Y" }}
