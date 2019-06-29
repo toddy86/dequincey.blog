@@ -24,9 +24,11 @@ layout: default
 
       <li{% if lang != empty %} lang="{{ lang }}"{% endif %}>
         <header class="post-header">
-          <h2 class="post-title">
-            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}{% if post.external-url %} &rarr;{% endif %}</a>
-          </h2>
+              {% if page.external-url %}
+      <h2 class="post-title" itemprop="name headline"><a href="{{ page.external-url }}">{{ page.title | escape }} &rarr;</a></h2>
+    {% else %}
+      <h2 class="post-title" itemprop="name headline">{{ page.title | escape }}</h2>
+    {% endif %}
 
           <p class="post-meta">
             {{ post.date | date: "%b, %Y" }}
