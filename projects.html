@@ -1,0 +1,35 @@
+---
+layout: default
+---
+<div class="home">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+  </header>
+
+  <p>Projects I have built to either solve a problem I had or learn new skills.</p>
+
+ <!--  <p>The projects listed here were created either because of an actual problem that I needed to solve (e.g. web scraping) or because I wanted to learn more about a programming or data science technique or technology stack.</p>
+
+  <p>Each project I attempt to use new libraries, tools or technologies to progress my knowledge and skill set.</p>
+
+  <p>Each project contains a summary of what I wanted to achieve, the things I learnt along the way and step-by-step instructions so that I or someone else can reproduce the project in the future.</p> -->
+
+  {{ content }}
+
+  <ul class="post-archives">
+    {% for post in site.categories.projects %}
+      <li>
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <p>{{ post.excerpt }}</p>
+      </li>
+
+
+        {% if post.content contains site.excerpt_separator %}
+          <p class="post-continue">
+            <a href="{{ post.url | relative_url }}">View project &rarr;</a>
+          </p>
+        {% endif %}
+      {% endfor %}
+  </ul>
+</div>
