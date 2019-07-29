@@ -404,17 +404,17 @@ It is useful to write data into staging tables, check the data quality and then 
 Checks can be as simple as counting if the total number of records is greater than 0 or more complex such as anomaly detection. 
 ```
 # Define the CREATE TABLE statement here
-{%- macro create_table() %}
+{%- \macro create_table() %}
 ...
 {%- endmacro %}
 
 # Main ETL logic, insert the results into a STAGING table
-{%- macro main() %}
+{%- \macro main() %}
 ...
 {%- endmacro %}
 
 # A series of simple presto CHECKS on the staging table
-{%- macro health_checks() %}
+{%- \macro health_checks() %}
 ...
 {%- endmacro %}
 
