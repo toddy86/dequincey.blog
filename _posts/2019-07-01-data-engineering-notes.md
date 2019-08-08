@@ -369,7 +369,7 @@ Idempotency means that the underlying source table should not be mutable (change
 #### Parameterise Workflow
 Jinja can be used in conjunction with SQL to template/parameterise ETLs. 
 ```
-
+{% raw  %}
 {%- if backfill %}
 INSERT OVERWRITE TABLE bookings_summary PARTITION (ds)
 {%- else %}
@@ -394,6 +394,7 @@ GROUP BY
 {%- if backfill %}
   , ds
 {%- endif %}
+{% endraw  %}
 ;
 ```
 
