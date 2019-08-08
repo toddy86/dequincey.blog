@@ -7,6 +7,7 @@ categories: resources
 A living and ever changing library of notes, resources useful technology and libraries for data engineering.
 
 <!-- more -->
+
 ## **General Overview**
 
 ***References***  
@@ -297,6 +298,7 @@ for downstream, upstream_list in deps.iteritems():
 ### Airflow ETL Best Practices
 
 #### Partition Data Tables
+
 Especially usefull when dealing with large-size tables with a long history. 
 
 When data is partitioned using datestamps, we can leverage dynamic partitions to parallelize backfilling.
@@ -313,6 +315,7 @@ PARTITION BY ( -- this is how we define partition keys
 ```
 
 #### Load Data Incrementally
+
 This will make your ETLs more modular and manageable, especially when building dimension tables from fact tables. 
 
 In each run of the ETL, we only need to append new transactions to the dimension table from the previous date partition instead of scanning the entire fact history. 
@@ -363,9 +366,11 @@ GROUP BY
 ```
 
 #### Enforce Idempotency
+
 Idempotency means that the underlying source table should not be mutable (changeable) as time progresses. Otherwise, when running the same query against the same business logic and time range would return different results. 
 
 #### Parameterise Workflow
+
 Jinja can be used in conjunction with SQL to template/parameterise ETLs. 
 ```
 {% raw  %}
@@ -397,8 +402,8 @@ GROUP BY
 ;
 ```
 
-
 #### Add Data Checks Early and Often
+
 It is useful to write data into staging tables, check the data quality and then if passing testing on staging load into the final production table. At AirBnB they call this *stage-check-exchange*.
 
 Checks can be as simple as counting if the total number of records is greater than 0 or more complex such as anomaly detection. 
@@ -419,13 +424,13 @@ Checks can be as simple as counting if the total number of records is greater th
 ...
 {%- endmacro %}
 {% endraw  %}
+
 # Finally, EXCHANGE the staging table with the prod table
 ```
 
-
 #### Building Useful Alerts and Monitoring Systems
-Use EmailOperators to send alerts for jobs which do not meet SLA targets, or where errors exceed certain statistical thresholds etc. 
 
+Use EmailOperators to send alerts for jobs which do not meet SLA targets, or where errors exceed certain statistical thresholds etc. 
 
 ### Design Patterns for Data Engineering Frameworks
 
@@ -491,6 +496,11 @@ It automates away the common data engineering work that is required for the crea
 ![alt text](https://miro.medium.com/max/700/1*1bJye64wHKTX81-AD2DBEA.png)
 
 
+
+
+
+
+
 ## Resources
 
 
@@ -505,15 +515,6 @@ It automates away the common data engineering work that is required for the crea
 * [Awesome Apache Airflow - list of resoures](https://github.com/jghoman/awesome-apache-airflow)
 * [ETL Best Practices with Aitflow ](https://gtoonstra.github.io/etl-with-airflow/index.html)
 * [Airflow Documentation](https://airflow.apache.org/index.html)
-
-#### SQL
-
-**Books** 
-* [Effective SQL: 61 Specific Ways to Write Better SQL](https://www.amazon.co.uk/Effective-SQL-Specific-Software-Development/dp/0134578899)
-
-**Web Resources**
-* [Mode: The SQL Tutorial for Data Analysis](https://mode.com/sql-tutorial/introduction-to-sql/)
-* 
 
 #### Python
 

@@ -17,6 +17,13 @@ The intellectual property of the below notes and resources belong to the sources
 
 ## SQL
 
+***References***  
+The following are notes from a variety of sources, including, but not limited to:
+* [Mode SQL Tutorial](https://mode.com/resources/sql-tutorial/)
+* [Effective SQL: 61 Specific Ways to Write Better SQL](https://www.amazon.co.uk/Effective-SQL-Specific-Software-Development/dp/0134578899)
+
+The intellectual property of the below notes and resources belong to the sources which they were derived. 
+
 ### Basics
 
 #### Query Clause Order
@@ -29,6 +36,10 @@ GROUP BY
 HAVING
 ORDER BY
 ```
+
+#### Order of operation
+
+!['Alt Text'](https://assets.website-files.com/589e47d231ee752554896f1f/59322015595b4e56313a0409_Screen%20Shot%202017-06-02%20at%207.32.53%20PM.png)
 
 #### HAVING
 
@@ -61,9 +72,43 @@ WHERE "group" LIKE 'Snoop%'
 
 ![alt text](https://i.stack.imgur.com/phA2q.jpg)
 
+#### UNION
+
+```
+SELECT *
+FROM table_part1
+
+UNION  -- OR UNION ALL
+
+SELECT *
+FROM table_part2
+```
+
+* UNION appends one dataset to another
+* UNION **excludes** any duplicate rows
+* UNION ALL will keep any duplicate rows 
+* Rules for appending data:  
+** Both tables must have the **same number of columns** (The column names do NOT need to be the same, but often are)  
+** The columns of both tables must have the **same data type**  and in the **same order**  
+
+
 ### Joins
 
 ![alt text](https://i.stack.imgur.com/1Tfy0.jpg)
+
+#### INNER JOIN
+
+Inner joins eliminate rows from both tables that do not satisfy the join condition set forth in the ON statement. In mathematical terms, an inner join is the intersection of the two tables.
+
+
+
+
+
+
+
+
+
+
 
 ### Sub-Queries
 
@@ -433,13 +478,80 @@ ORDER BY descript DESC
 
 If a dataset contains nulls that you’d prefer to contain actual values, use COALESCE to cocerce null into the desired value (e.g. 0). 
 
+### Performance Tuning
 
-## Resources
+#### Reducing Table Size
 
-#### SQL
-**Books** 
-* [Effective SQL: 61 Specific Ways to Write Better SQL](https://www.amazon.co.uk/Effective-SQL-Specific-Software-Development/dp/0134578899)
+Filtering the data to include only the observations you need can dramatically improve query speed. 
 
-**Web Resources**
-* [Mode: The SQL Tutorial for Data Analysis](https://mode.com/sql-tutorial/introduction-to-sql/)
-* 
+```
+SELECT *
+FROM table
+WHERE 
+    event_date >= '2014-03-01'
+AND event_date <  '2014-04-01'
+```
+
+It can be good practice to do 'exploratory' SQL queries, to ensure that the results are correct before running the query on the full dataset. The full query may still take a long time to run, but you will have some assurance that the query results will be correct. 
+
+**LIMIT** 
+* LIMIT is a way to easily reduce the query size. 
+* Note: **LIMIT does NOTHING for the speed of aggregations**, as the aggregation (e.g. COUNT) is performed BEFORE the LIMIT. 
+* To effectively use LIMIT with aggregations, you must use LIMIT in a sub-query first.
+* LIMIT is useful to test SQL query logic. But it will **NOT** produce accurate results. It should only be used in this context for improved query speed when checking logic.
+* LIMIT should be used as early as possible in the query (i.e. in the sub-query, not the outer query).
+
+```
+SELECT 
+    COUNT(*)
+FROM (
+    SELECT *
+    FROM benn.sample_event_table
+    LIMIT 100  -- This will speed up the COUNT aggregation
+     ) sub
+```
+
+#### Making joins less complicated
+
+It is better to reduce the table size **before** performing joins
+
+**Slow join**  
+```
+SELECT teams.conference AS conference,
+       players.school_name,
+       COUNT(1) AS players
+  FROM table1 as players
+  JOIN table2 as teams
+    ON teams.school_name = players.school_name
+ GROUP BY conference, players.schoolname
+``` 
+
+**Faster join**  
+```
+SELECT teams.conference,
+       sub.*
+FROM (
+    SELECT 
+        players.school_name,
+        COUNT(*) AS players
+    FROM table1 as players
+    GROUP BY players.school_name
+      ) sub
+JOIN table2 as teams
+ON teams.school_name = sub.school_name
+```
+
+#### EXPLAIN
+
+Add the key word **EXPLAIN** before a query to get a rough approximation as to how long the query will take to run, along with the query plan. 
+
+```
+EXPLAIN
+SELECT teams.conference AS conference,
+       players.school_name,
+       COUNT(1) AS players
+  FROM table1 as players
+  JOIN table2 as teams
+    ON teams.school_name = players.school_name
+ GROUP BY conference, players.schoolname
+```
