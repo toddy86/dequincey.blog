@@ -21,7 +21,7 @@ The intellectual property of the below notes and resources belong to the sources
 
 ### Basics
 
-####  <a href="#Query-Clause-Order">Query Clause Order</a>
+#### Query Clause Order
 
 
 ```
