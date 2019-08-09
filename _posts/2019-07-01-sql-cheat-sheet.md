@@ -7,15 +7,10 @@ categories: resources
 A library of SQL notes and code snippets.
 
 <!-- more -->
-## **General Overview**
+<h1>Table of Contents<span class="tocSkip"></span></h1>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Basics" data-toc-modified-id="Basics-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Basics</a></span><ul class="toc-item"><li><span><a href="#Query-Clause-Order" data-toc-modified-id="Query-Clause-Order-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>Query Clause Order</a></span></li><li><span><a href="#Order-of-operation" data-toc-modified-id="Order-of-operation-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>Order of operation</a></span></li><li><span><a href="#HAVING" data-toc-modified-id="HAVING-1.3"><span class="toc-item-num">1.3&nbsp;&nbsp;</span>HAVING</a></span></li><li><span><a href="#LIKE" data-toc-modified-id="LIKE-1.4"><span class="toc-item-num">1.4&nbsp;&nbsp;</span>LIKE</a></span></li><li><span><a href="#CASE" data-toc-modified-id="CASE-1.5"><span class="toc-item-num">1.5&nbsp;&nbsp;</span>CASE</a></span></li></ul></li><li><span><a href="#Union,-Intersect-and-Except" data-toc-modified-id="Union,-Intersect-and-Except-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Union, Intersect and Except</a></span><ul class="toc-item"><li><span><a href="#UNION" data-toc-modified-id="UNION-2.1"><span class="toc-item-num">2.1&nbsp;&nbsp;</span>UNION</a></span></li></ul></li><li><span><a href="#Joins" data-toc-modified-id="Joins-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Joins</a></span><ul class="toc-item"><li><span><a href="#INNER-JOIN" data-toc-modified-id="INNER-JOIN-3.1"><span class="toc-item-num">3.1&nbsp;&nbsp;</span>INNER JOIN</a></span></li></ul></li><li><span><a href="#Sub-Queries" data-toc-modified-id="Sub-Queries-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Sub-Queries</a></span><ul class="toc-item"><li><span><a href="#Overview" data-toc-modified-id="Overview-4.1"><span class="toc-item-num">4.1&nbsp;&nbsp;</span>Overview</a></span></li><li><span><a href="#Aggregation-in-multiple-stages" data-toc-modified-id="Aggregation-in-multiple-stages-4.2"><span class="toc-item-num">4.2&nbsp;&nbsp;</span>Aggregation in multiple stages</a></span></li><li><span><a href="#Conditional-Logic" data-toc-modified-id="Conditional-Logic-4.3"><span class="toc-item-num">4.3&nbsp;&nbsp;</span>Conditional Logic</a></span></li><li><span><a href="#Joining-Sub-Queries" data-toc-modified-id="Joining-Sub-Queries-4.4"><span class="toc-item-num">4.4&nbsp;&nbsp;</span>Joining Sub-Queries</a></span></li><li><span><a href="#Sub-queries-and-UNION" data-toc-modified-id="Sub-queries-and-UNION-4.5"><span class="toc-item-num">4.5&nbsp;&nbsp;</span>Sub-queries and UNION</a></span></li></ul></li><li><span><a href="#Dates-&amp;-Times" data-toc-modified-id="Dates-&amp;-Times-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Dates &amp; Times</a></span><ul class="toc-item"><li><span><a href="#Extracting-Dates" data-toc-modified-id="Extracting-Dates-5.1"><span class="toc-item-num">5.1&nbsp;&nbsp;</span>Extracting Dates</a></span></li><li><span><a href="#Calculating-Intervals" data-toc-modified-id="Calculating-Intervals-5.2"><span class="toc-item-num">5.2&nbsp;&nbsp;</span>Calculating Intervals</a></span></li><li><span><a href="#Current-Date-&amp;-Time" data-toc-modified-id="Current-Date-&amp;-Time-5.3"><span class="toc-item-num">5.3&nbsp;&nbsp;</span>Current Date &amp; Time</a></span></li><li><span><a href="#CAST" data-toc-modified-id="CAST-5.4"><span class="toc-item-num">5.4&nbsp;&nbsp;</span>CAST</a></span></li><li><span><a href="#DATE_TRUNC" data-toc-modified-id="DATE_TRUNC-5.5"><span class="toc-item-num">5.5&nbsp;&nbsp;</span>DATE_TRUNC</a></span></li></ul></li><li><span><a href="#Strings" data-toc-modified-id="Strings-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Strings</a></span><ul class="toc-item"><li><span><a href="#LEFT,-RIGHT,-LENGTH-&amp;-SUBSTR" data-toc-modified-id="LEFT,-RIGHT,-LENGTH-&amp;-SUBSTR-6.1"><span class="toc-item-num">6.1&nbsp;&nbsp;</span>LEFT, RIGHT, LENGTH &amp; SUBSTR</a></span></li><li><span><a href="#TRIM" data-toc-modified-id="TRIM-6.2"><span class="toc-item-num">6.2&nbsp;&nbsp;</span>TRIM</a></span></li><li><span><a href="#POSITION-&amp;-STRPOS" data-toc-modified-id="POSITION-&amp;-STRPOS-6.3"><span class="toc-item-num">6.3&nbsp;&nbsp;</span>POSITION &amp; STRPOS</a></span></li><li><span><a href="#CONCAT" data-toc-modified-id="CONCAT-6.4"><span class="toc-item-num">6.4&nbsp;&nbsp;</span>CONCAT</a></span></li><li><span><a href="#UPPER-&amp;-LOWER" data-toc-modified-id="UPPER-&amp;-LOWER-6.5"><span class="toc-item-num">6.5&nbsp;&nbsp;</span>UPPER &amp; LOWER</a></span></li><li><span><a href="#COALESCE" data-toc-modified-id="COALESCE-6.6"><span class="toc-item-num">6.6&nbsp;&nbsp;</span>COALESCE</a></span></li></ul></li><li><span><a href="#Performance-Tuning" data-toc-modified-id="Performance-Tuning-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Performance Tuning</a></span><ul class="toc-item"><li><span><a href="#Reducing-Table-Size" data-toc-modified-id="Reducing-Table-Size-7.1"><span class="toc-item-num">7.1&nbsp;&nbsp;</span>Reducing Table Size</a></span></li><li><span><a href="#Making-joins-less-complicated" data-toc-modified-id="Making-joins-less-complicated-7.2"><span class="toc-item-num">7.2&nbsp;&nbsp;</span>Making joins less complicated</a></span></li><li><span><a href="#EXPLAIN" data-toc-modified-id="EXPLAIN-7.3"><span class="toc-item-num">7.3&nbsp;&nbsp;</span>EXPLAIN</a></span></li></ul></li></ul></div>
 
-***References***  
-The following are notes from a variety of sources, including, but not limited to:
-* [Mode SQL Tutorial](https://mode.com/resources/sql-tutorial/)
-
-The intellectual property of the below notes and resources belong to the sources which they were derived. 
-
-## SQL
+# SQL
 
 ***References***  
 The following are notes from a variety of sources, including, but not limited to:
@@ -67,6 +62,19 @@ WHERE "group" LIKE 'Snoop%'
 
 * % is a wildcard value
 * Instead of using the single quotes, the double quotes around "group" are to indicate that "group" is the name of a column and not the group function in SQL. 
+
+#### CASE
+
+```
+CASE
+    WHEN condition1 THEN result1
+    WHEN condition2 THEN result2
+    WHEN conditionN THEN resultN
+    ELSE result
+END
+```
+
+Used as an IF-THEN-ELSE statement for SQL
 
 ### Union, Intersect and Except
 
