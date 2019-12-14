@@ -23,7 +23,7 @@ Learn and summarise common git commands into a cheat sheet.
 | Git Command | Description |
 |-------|--------|
 | git init | Create an initial git repository locally |
-| git cline repository_name.git | Clone an existing remote repository | 
+| git clone repository_name.git | Clone an existing remote repository | 
 
 
 ---

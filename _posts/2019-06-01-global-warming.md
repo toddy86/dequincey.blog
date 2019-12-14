@@ -7,8 +7,8 @@ categories: projects
 An interactive dashboard of historical temperatures of cities across the globe from 1960 until present day. 
 
 <!-- more -->
-<b>THIS PROJECT IS STILL A WORK IN PROGRESS</b>  
-Last updated 28 June 2019
+<b>THIS PROJECT HAS BEEN ABANDONED</b>  
+Last updated 28 June 2019. Abandoned due to a lack of time and the desire to focus on other areas (TDD etc)
 
 ## Git Repository  
 Click <a href="https://github.com/toddy86/globalwarming">here</a> to view the git repository of this project. 
