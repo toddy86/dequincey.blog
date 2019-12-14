@@ -4,7 +4,7 @@ title: Why I write
 categories: thoughts
 ---
 
-Someone recently asked me, why I write my newsletter and on this blog. Do I write for hope of fame, for praise or in pursuit of fortune? None of these are reason why I write.
+Someone recently asked me, why I write on this blog. Do I write for hope of fame, for praise or in pursuit of fortune? None of these are reason why I write.
 
 <!-- more -->
 
