@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Global Warming
-categories: projects
+categories: 
 ---
 
 An interactive dashboard of historical temperatures of cities across the globe from 1960 until present day. 
@@ -80,8 +80,3 @@ The following key data cleaning and pre-processing steps have been completed in 
 * Implement navigation pane to other pages
 * Implement 5-day city forecast page using machine learning algorithms to predict the temperature
 * Implement a long-range (i.e. 20-50 year) forecast of expected global temperatures using statistical / machine learning methods
-
-
-
-
-
