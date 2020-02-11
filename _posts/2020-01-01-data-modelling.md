@@ -47,12 +47,10 @@ The data warehouse and the accompanying business intelligence tool(s) must:
 - Are simple, which benefits the business users as it is easier to understand and navigate
 - As there are fewer table joins required to get insights, the query performance is significantly improved over a 3NF model
 - Are very extensible to accommodate change within the business, whereas a model in the 3NF is significantly harder to change.
-- 
 
 ## Fact Tables
 ### General
 - Stores the performance measurements of a business
-- Fact tables are ordinarily normalised to the 3NF??????????????????
 - Each row in a fact table corresponds to a measurement event (e.g. a sale, support call)
 - The data on each row is at a specific level of details, referred to as the *grain* (e.g. one row per product sold in a sales transaction)
 - A key principle of dimensional modelling is that ALL rows in a fact table MUST have the same grain. Required to avoid double counting and erronous data
@@ -179,9 +177,6 @@ Methods include:
 	- Row effective date or datetime
 	- Row expiration date or datetime
 	- Current row indicator
-4. 
-
-#### x
 
 ## Data Warehouse Architecture
 There are many methods to designing the architecture of a data warehouse / business intelligence solution. Three of the most dominant methods are:
@@ -274,11 +269,6 @@ Dimensional models are resilient when data relationships change. All the followi
 ## References
 The above notes are from a variety of sources, including, but not limited to:
 * [The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling, 3rd Edition](https://www.amazon.co.uk/Data-Warehouse-Toolkit-Definitive-Dimensional/dp/1118530802/ref=pd_sbs_14_t_0/260-8697327-9127526?_encoding=UTF8&pd_rd_i=1118530802&pd_rd_r=fa6e740a-7d6f-47cb-a583-df6ac1d5b3f3&pd_rd_w=9t239&pd_rd_wg=VUxZY&pf_rd_p=e44592b5-e56d-44c2-a4f9-dbdc09b29395&pf_rd_r=7YZTSDT3PMM7V0FBGMJQ&psc=1&refRID=7YZTSDT3PMM7V0FBGMJQ)
-* [title](href)
-* [title](href)
-* [title](href)
-* [title](href)
-* [title](href)
 
 
 The intellectual property of the below notes and resources belong to the sources which they were derived. 
