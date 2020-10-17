@@ -100,7 +100,24 @@ pytest -m 'smoke and api'
 
 ## Fixtures
 - Setup and teardown that can be used across multiple tests
-- autouse: all tests in this file will use the fixture
+- Fixtures are functions that are run by pytest before or after the test functions. 
+- When running a test, pytest will look first in the file where the test is, then conftest for a fixture
+- Do NOT import the conftest.py file into test files. It is automatically imported by pytest
+- If you want to share fixtures across multiple files, put the fixtures into conftest.py
+- A fixture function runs before a test that use it. However, if there is a yield in the function, it stops there, passes control to the tests, and picks up on the next line after the tests are done. Therefore, think of the code above the yield as “setup” and the code after yield as “teardown.” The code after the yield, the “teardown,” is guaranteed to run regardless of what happens during the test. You can also return data with a yield. (Source: Python Testing with pytest, page 51)
+- Run `pytest --setup-show test_example.py` to show the fixture setup and tear down during a test. Useful for when developing a fixture.
+- If a fixture has a failure (i.e. assert fails), it will show up in the stacktrace as a failure. However, any test which uses the fixture will not show as failed, they will show as errored. This is a big distinction. 
+- If using the GIVEN, WHEN, THEN architecture of tests, attempt to push as much as possible of the GIVEN into fixtures. This provides the benefits of 1) more readable tests and 2) If the fixture fails, the test will not fail - it will error
+- `@pytest.fixture()` can take on the scope of either function, class, module, or session. The default scope is function.
+- `@pytest.fixture(scope='function')` Run once per test function. The setup portion is run before each test using the fixture. The teardown portion is run after each test using the fixture. Default is scope not specified. (Source: Python Testing with pytest, page 57)
+- `@pytest.fixture(scope='class')` Run once per test class, regardless of how many test methods are in the class. (Source: Python Testing with pytest, page 57)
+- `@pytest.fixture(scope='module')` Run once per module, regardless of how many test functions or methods or other fixtures in the module use it. (Source: Python Testing with pytest, page 57)
+- `@pytest.fixture(scope='session')` Run once per session. All test methods and functions using a fixture of session scope share one setup and teardown call. (Source: Python Testing with pytest, page 57)
+- IMPORTANT: Fixtures can only depend on other fixtures of their same scope or wider. For example, a function scope fixture can rely on class or module fixtures, but a class scope fixture cannot rely on a function scope fixture.
+- IMPORTANT: `tmpdir` is function scope and `tmpdir_factory` is session scope
+- To use a fixture you can either pass it in as an arg to the function or use `@pytest.mark.usefixtures('fixture1', 'fixture2')`. The latter makes sense when setting up a test class.
+- IMPORTANT: A test using a fixture via `@pytest.usefixtures` CANNOT use the fixture’s return value. To use the return value it MUST be passed in as an arg
+- `@fixture(autouse=True)`: All tests in this file will use the fixture. More of an exception than a rule, so use with care.
 
 {% highlight python %}
 # Source: Python Testing with pytest, page 33
@@ -110,10 +127,18 @@ def initialised__db(tmpdir):
     # Setup : start db
     tasks.start_tasks_db(str(tmpdir), 'tiny') 
     
-    yield # this is where the testing happens
+    yield # this is where the testing happens. Control is passed to the test when yield is hit
     
     # Teardown : stop db
     tasks.stop_tasks_db()
+
+# All class test methods use a fixture
+@pytest.mark.usefixtures('fixture1', 'fixture2')
+class TestClass:
+    def test_one(self):
+        ...
+    def test_two(self):
+        ...
 {% endhighlight %}
 
 

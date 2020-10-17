@@ -53,6 +53,7 @@ plugins:
   - jekyll-archives
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-include-cache
 
 # Build settings
 markdown: kramdown
@@ -82,4 +83,5 @@ jekyll-archives:
     category: /categories/:name/
     tag: /tags/:name/
 
-theme: jekyll-theme-midnight
+# theme: jekyll-theme-midnight
+remote_theme: "mmistakes/minimal-mistake@4.20.2"
